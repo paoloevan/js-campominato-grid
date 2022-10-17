@@ -38,7 +38,7 @@ playButton.addEventListener('click', function (numberCells) {
     for (let i = 1; i < numberCells; i++) {
 
         // creo elemento da inserire nella dom
-        cellEl = document.createElement('div');
+        const cellEl = document.createElement('div');
 
         //inserisco elemento nella dom con ciclo
         containerEl.append(cellEl);
@@ -56,13 +56,13 @@ playButton.addEventListener('click', function (numberCells) {
         // aggiungo numero nella cella
         cellEl.innerText = i;
 
+        
         cellEl.addEventListener('click', function () {
             //aggiungo classe active
             cellEl.classList.add('active');
-
+            
             //emissione messaggio console con numero della cella
             console.log(cellEl.innerText);
         })
     }
-
 })
