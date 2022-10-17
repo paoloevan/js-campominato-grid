@@ -7,7 +7,7 @@
     max-width: 1200px;
     margin: 2rem auto;
     font-size: 1.5rem;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
 }
 .cell {
@@ -25,4 +25,17 @@
 }
 .cell:hover {
     cursor: pointer;
+}
+button {
+    margin: 3rem;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    background-color: greenyellow;
+    font-weight: 900;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.buttons {
+    text-align: center;
 }

@@ -9,6 +9,13 @@ con il numero della cella cliccata.
 
 // seleziono elemento della dom
 const containerEl = document.querySelector('.container');
+//seleziono bottone dalla dom
+const playButton = document.getElementById('play');
+//aggiungo event listner
+playButton.addEventListener('click', function () {
+    document.querySelector('.container').style.display = 'flex';
+
+})
 
 
 for (let i = 1; i < 101; i++) {
