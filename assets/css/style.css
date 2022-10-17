@@ -39,3 +39,14 @@ button {
 .buttons {
     text-align: center;
 }
+
+select, option {
+    margin: 3rem;
+    padding: 1rem;
+    border-radius: 30px;
+    background-color: green;
+    font-weight: 900;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer; 
+}
