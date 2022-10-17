@@ -11,7 +11,7 @@ con il numero della cella cliccata.
 const containerEl = document.querySelector('.container');
 
 
-for (let i = 0; i < 100; i++) {
+for (let i = 1; i < 101; i++) {
 
     // creo elemento da inserire nella dom
     const cellEl = document.createElement('div');
@@ -22,4 +22,6 @@ for (let i = 0; i < 100; i++) {
     //aggiungo la classe al'elemento
     cellEl.className = 'cell';
 
+    // aggiungo numero nella cella
+    cellEl.innerText = i;
 }
