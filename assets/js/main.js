@@ -20,14 +20,26 @@ divise in 7 caselle per 7 righe;
 const containerEl = document.querySelector('.container');
 //seleziono bottone dalla dom
 const playButton = document.getElementById('play');
-//seleziono elemento select
-const difficultEl = document.getElementById('difficult').value;
+
+
 
 //aggiungo event listner
-playButton.addEventListener('click', function () {
+playButton.addEventListener('click', function (numberCells) {
     document.querySelector('.container').style.display = 'flex';
+    //seleziono elemento select
+    const difficultEl = document.getElementById('difficult').value;
+    //condizione per difficoltà
+    if (difficultEl == 'facile') {
+        numberCells = 101
+    } else if (difficultEl == 'normale') {
+        numberCells = 82;
+    } else if (difficultEl == 'difficile'){
+        numberCells = 50;
+    }
+    console.log(numberCells);
+    console.log(difficultEl);
 
-    for (let i = 1; i < 101; i++) {
+    for (let i = 1; i < numberCells; i++) {
 
         // creo elemento da inserire nella dom
         const cellEl = document.createElement('div');
