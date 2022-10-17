@@ -20,3 +20,9 @@
     align-items: center;
     font-weight: bolder;
 }
+.active {
+    background-color: aqua;
+}
+.cell:hover {
+    cursor: pointer;
+}

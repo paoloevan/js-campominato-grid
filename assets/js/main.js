@@ -24,4 +24,12 @@ for (let i = 1; i < 101; i++) {
 
     // aggiungo numero nella cella
     cellEl.innerText = i;
+
+    cellEl.addEventListener('click', function () {
+        //aggiungo classe active
+        cellEl.classList.add('active')
+
+        //emissione messaggio console con numero della cella
+        console.log(cellEl.innerText);
+    })
 }
