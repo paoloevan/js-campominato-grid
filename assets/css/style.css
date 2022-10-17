@@ -11,7 +11,6 @@
     flex-wrap: wrap;
 }
 .cell {
-    width: calc(100% / 10);
     aspect-ratio: 1/1;
     border: 2px solid;
     flex-wrap: wrap;
@@ -19,6 +18,15 @@
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+}
+.cell_easy {
+    width: calc(100% / 10);
+}
+.cell_md {
+    width: calc(100% / 9);
+}
+.cell_hard {
+    width: calc(100% / 7);
 }
 .active {
     background-color: aqua;

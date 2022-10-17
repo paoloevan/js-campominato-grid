@@ -21,8 +21,6 @@ const containerEl = document.querySelector('.container');
 //seleziono bottone dalla dom
 const playButton = document.getElementById('play');
 
-
-
 //aggiungo event listner
 playButton.addEventListener('click', function (numberCells) {
     document.querySelector('.container').style.display = 'flex';
@@ -30,32 +28,37 @@ playButton.addEventListener('click', function (numberCells) {
     const difficultEl = document.getElementById('difficult').value;
     //condizione per difficoltà
     if (difficultEl == 'facile') {
-        numberCells = 101
+        numberCells = 101;
     } else if (difficultEl == 'normale') {
         numberCells = 82;
     } else if (difficultEl == 'difficile'){
         numberCells = 50;
     }
-    console.log(numberCells);
-    console.log(difficultEl);
 
     for (let i = 1; i < numberCells; i++) {
 
         // creo elemento da inserire nella dom
-        const cellEl = document.createElement('div');
+        cellEl = document.createElement('div');
 
         //inserisco elemento nella dom con ciclo
         containerEl.append(cellEl);
 
         //aggiungo la classe al'elemento
-        cellEl.className = 'cell';
+        if (difficultEl == 'facile') {
+            cellEl.className = 'cell_easy cell';
+        } else if (difficultEl == 'normale') {
+            cellEl.className = 'cell_md cell';
+        } else if (difficultEl == 'difficile'){
+            cellEl.className = 'cell_hard cell';
+            
+        }
 
         // aggiungo numero nella cella
         cellEl.innerText = i;
 
         cellEl.addEventListener('click', function () {
             //aggiungo classe active
-            cellEl.classList.add('active')
+            cellEl.classList.add('active');
 
             //emissione messaggio console con numero della cella
             console.log(cellEl.innerText);
