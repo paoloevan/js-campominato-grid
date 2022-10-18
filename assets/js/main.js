@@ -23,19 +23,22 @@ const playButton = document.getElementById('play');
 
 //aggiungo event listner
 playButton.addEventListener('click', function () {
+    //azzero griglia
+    containerEl.innerHTML = ''
+    //appare la griglia
     document.querySelector('.container').style.display = 'flex';
     //seleziono elemento select
     const difficultEl = document.getElementById('difficult').value;
     //condizione per difficoltà
-    if (difficultEl == 'facile') {
-        numberCells = 101;
+    if (difficultEl == 'difficile') {
+        numberCells = 100;
     } else if (difficultEl == 'normale') {
-        numberCells = 82;
-    } else if (difficultEl == 'difficile'){
-        numberCells = 50;
+        numberCells = 81;
+    } else if (difficultEl == 'facile'){
+        numberCells = 49;
     }
 
-    for (let i = 1; i < numberCells; i++) {
+    for (let i = 1; i <= numberCells; i++) {
 
         // creo elemento da inserire nella dom
         const cellEl = document.createElement('div');
@@ -45,11 +48,11 @@ playButton.addEventListener('click', function () {
 
         //aggiungo la classe al'elemento
         if (difficultEl == 'facile') {
-            cellEl.className = 'cell_easy cell';
+            cellEl.className = 'cell_hard cell';
         } else if (difficultEl == 'normale') {
             cellEl.className = 'cell_md cell';
         } else if (difficultEl == 'difficile'){
-            cellEl.className = 'cell_hard cell';
+            cellEl.className = 'cell_easy cell';
             
         }
 
