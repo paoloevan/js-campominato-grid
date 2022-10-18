@@ -22,7 +22,7 @@ const containerEl = document.querySelector('.container');
 const playButton = document.getElementById('play');
 
 //aggiungo event listner
-playButton.addEventListener('click', function (numberCells) {
+playButton.addEventListener('click', function () {
     document.querySelector('.container').style.display = 'flex';
     //seleziono elemento select
     const difficultEl = document.getElementById('difficult').value;
@@ -59,7 +59,9 @@ playButton.addEventListener('click', function (numberCells) {
         
         cellEl.addEventListener('click', function () {
             //aggiungo classe active
-            cellEl.classList.add('active');
+            //cellEl.classList.add('active'); //soluzione alternativa
+            this.classList.add('active');
+            //this.classList.toggle('active'); //soluzione alternativa
             
             //emissione messaggio console con numero della cella
             console.log(cellEl.innerText);
